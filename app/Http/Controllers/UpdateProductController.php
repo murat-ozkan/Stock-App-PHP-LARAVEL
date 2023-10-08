@@ -14,25 +14,28 @@ class UpdateProductController extends Controller
      */
     public function index($id)
     {
-        return $id;
+        $product = DB::table("products")->find($id);
+
+        return view("products/updateproduct", compact("product"));
     }
-    // public function addform(Request $request)
-    // {
-    //     $validatedData = $request->validate(
-    //         [
-    //             "product_title" => "required",
-    //             "product_content" => "required",
-    //             "product_price" => "required",
-    //             "product_pic" => "nullable"
-    //         ]
-    //     );
-    //     // return $validatedData;
 
-    //     $updatedProduct = DB::table("products")
-    //         ->insert($validatedData);
+    public function addform(Request $request)
+    {
+        $validatedData = $request->validate(
+            [
+                "product_title" => "required",
+                "product_content" => "required",
+                "product_price" => "required",
+                "product_pic" => "nullable"
+            ]
+        );
+        // return $validatedData;
 
-    //     if ($updatedProduct) {
-    //         return back()->with("status", "Kayıt Güncellendi");
-    //     }
-    // }
+        $updatedProduct = DB::table("products")
+            ->insert($validatedData);
+
+        if ($updatedProduct) {
+            return back()->with("status", "Kayıt Güncellendi");
+        }
+    }
 }
