@@ -19,9 +19,9 @@
                     <h5 class="card-title mb-1">{{$product->product_title}}</h5>
                     <p class="card-text">{{$product->product_content}}</p>
                     <h5 class="card-footer d-flex justify-content-end">{{$product->product_price}} $</h5>
-                    <div class="justify-content-bottom">
-                        <a href="{{route("updateproduct",["id"=>$product->id])}}" class="btn btn-primary">Edit</a>
-                        <a href="{{route("deleteproduct",["id"=>$product->id])}}" class="btn btn-danger">Delete</a>
+                    <div class="d-flex justify-content-center">
+                        <a href="{{route("updateproduct",["id"=>$product->id])}}" class="btn btn-primary m-3">Edit</a>
+                        <a href="{{route("deleteproduct",["id"=>$product->id])}}" class="btn btn-danger m-3">Delete</a>
                     </div>
                 </div>
             </div>
