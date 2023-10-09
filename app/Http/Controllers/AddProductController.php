@@ -31,9 +31,8 @@ class AddProductController extends Controller
         $newProduct = DB::table("products")
             ->insert($validatedData);
 
-        if($newProduct){
-            return back()->with("status", "Kayıt Başarılı");
+        if ($newProduct) {
+            return back()->with("status", "Saved Successfully");
         }
     }
 }
-

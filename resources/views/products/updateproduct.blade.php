@@ -6,7 +6,7 @@
     </div>
 
     @if (session()->has("status"))
-        <div class="alert alert-success">
+        <div class="alert alert-success" role="alert">
             {{session("status")}}
         </div>
     @endif
@@ -57,7 +57,7 @@
             value="{{$product->product_pic}}">
         </div>
         <div class="mb-3 text-center">
-            <input class="btn btn-primary" type="submit" value="Add Product">
+            <input class="btn btn-primary" type="submit" value="Update Product">
         </div>
     </form>
 @endsection

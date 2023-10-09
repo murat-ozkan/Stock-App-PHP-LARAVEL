@@ -20,7 +20,7 @@
                     <p class="card-text">{{$product->product_content}}</p>
                     <div class="justify-content-bottom">
                         <a href="{{route("updateproduct",["id"=>$product->id])}}" class="btn btn-primary">Edit</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
+                        <a href="{{route("deleteproduct",["id"=>$product->id])}}" class="btn btn-danger">Delete</a>
                     </div>
                 </div>
             </div>

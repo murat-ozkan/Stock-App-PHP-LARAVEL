@@ -36,7 +36,19 @@ class UpdateProductController extends Controller
             ->update($validatedData);
 
         if ($updatedProduct) {
-            return back()->with("status", "Kayıt Güncellendi");
+            return back()->with("status", "Updated Successfully");
         }
+    }
+    public function deleteproduct(Request $request, $id)
+    {
+        DB::table("products")
+            ->Delete($id);
+
+        // 2. method
+        // DB::table("products")
+        // ->where("id", $id)
+        // ->Delete($id);
+
+        return back();
     }
 }
