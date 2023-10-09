@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-    <div class="col-md-12">
+    <div class="col-md-12 mt-3">
         <h4>ADD PRODUCT</h4>
     </div>
 

@@ -19,7 +19,7 @@ class UpdateProductController extends Controller
         return view("products/updateproduct", compact("product"));
     }
 
-    public function addform(Request $request)
+    public function addform(Request $request, $id)
     {
         $validatedData = $request->validate(
             [
@@ -32,7 +32,8 @@ class UpdateProductController extends Controller
         // return $validatedData;
 
         $updatedProduct = DB::table("products")
-            ->insert($validatedData);
+            ->where("id", $id)
+            ->update($validatedData);
 
         if ($updatedProduct) {
             return back()->with("status", "Kayıt Güncellendi");

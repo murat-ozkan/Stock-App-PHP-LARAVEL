@@ -17,13 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get("/", [ProductsController::class, "index"]);
 Route::get("/products", [ProductsController::class, "index"]);
 
 Route::get("/addproduct", [AddProductController::class, "index"])->name("addproduct");
 Route::post("/addproduct", [AddProductController::class, "addform"]);
 
 Route::get("/updateproduct/{id}", [UpdateProductController::class, "index"])->name("updateproduct");
-Route::post("/updateproduct", [UpdateProductController::class, "addform"]);
+Route::post("/updateproduct/{id}", [UpdateProductController::class, "addform"]);

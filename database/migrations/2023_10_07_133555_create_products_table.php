@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string("product_title")->nullable();
             $table->text("product_content")->nullable();
             $table->double("product_price")->nullable();
+            $table->text("product_pic")->nullable();
         });
     }
 

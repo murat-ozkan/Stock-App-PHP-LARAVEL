@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-    <div class="col-md-12">
+    <div class="col-md-12 mt-3">
         <h4>UPDATE PRODUCT</h4>
     </div>
 
@@ -11,7 +11,7 @@
         </div>
     @endif
 
-    <form method="post" class="col-md-6">
+    <form method="POST" class="col-md-6">
 
         @CSRF
 
