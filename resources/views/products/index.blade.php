@@ -18,6 +18,7 @@
                 <div class="card-body d-flex flex-column justify-content-around">
                     <h5 class="card-title mb-1">{{$product->product_title}}</h5>
                     <p class="card-text">{{$product->product_content}}</p>
+                    <h5 class="card-footer d-flex justify-content-end">{{$product->product_price}} $</h5>
                     <div class="justify-content-bottom">
                         <a href="{{route("updateproduct",["id"=>$product->id])}}" class="btn btn-primary">Edit</a>
                         <a href="{{route("deleteproduct",["id"=>$product->id])}}" class="btn btn-danger">Delete</a>
